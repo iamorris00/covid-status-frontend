@@ -867,7 +867,7 @@ export default {
     }
   },
   mounted() {
-    axios.get("http://127.0.0.1:8000/api/status/").then(data =>{
+    axios.get("http://34.205.74.186/api/status/").then(data =>{
       for (let i = 0; i < data.data.length; i++) {
         this.countries.push(data.data[i].country_region)
         this.populations.push(this.numberWithCommas(data.data[i].population))
