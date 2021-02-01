@@ -8,11 +8,12 @@
         </div>
         <div class="font-p">
           <p class="text-white text-md-left ">Estado actual de casos activos, recuperados, muertes y vacunas del coronavirus
-            (COVID-19) un proceso constante en 190 paises en el mundo.</p>
+            (COVID-19) en forma de una barra de carga, un proceso constante en 190 paises en el mundo.</p>
         </div>
+        <img src="@/assets/legend.png" alt="Legend" id="imgLegend">
       </div>
       <div class="col-6">
-        <img  src="@/assets/map.svg" id="map" alt="World to save" />
+        <img  src="@/assets/map.png" id="map" alt="World to save" />
       </div>
     </div>
     <br/>
@@ -56,6 +57,16 @@
         </div>
       </li>
     </ul>
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start">
+      <!-- Grid container -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        Hecho por:
+        <a class="text-dark" href="https://web.facebook.com/Slionx">Erick Morris</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
   </div>
 </template>
 
@@ -969,8 +980,9 @@ export default {
 
 #map{
   place-self: center;
-  height: 100%;
+  height: auto;
   max-width: 100%;
+  padding-top: 5rem;
 }
 
 
@@ -1006,6 +1018,13 @@ export default {
   max-width: 100%;
 }
 @media screen and (max-width:675px) {
+
+  img#imgLegend{
+  place-self: center;
+  height: 20%;
+  max-width: 40%;
+  align-self: flex-end;
+}
   img#map {
     display: none;
   }
@@ -1074,6 +1093,13 @@ export default {
   position: absolute;
   z-index: 0;
   height: 100%;
+}
+
+#imgLegend{
+  place-self: center;
+  height: 30%;
+  max-width: 40%;
+  align-self: flex-end;
 }
 
 //.sorter-containers{
